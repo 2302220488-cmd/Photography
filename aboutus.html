@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Suren</title>
-    <link rel="stylesheet" href="suren.css">
+  <meta charset="UTF-8">
+  <title>About Us | LensbySuren</title>
+  <link rel="stylesheet" href="suren.css">
 </head>
 <body>
-
-<nav>
-    <h2>Welcome to <span>My Profile</span></h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portofolio.html">Portfolio</a></li>
-        <li><a href="aboutus.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<nav class="navbar">
+  <h2>Lensby<span>Suren</span></h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portofolio.html">Portfolio</a></li>
+    <li><a class="active"href="aboutus.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
+<section class="about">
+  <h3 class="about-title">Something That We Have</h3>
 
-<section class="about-us">
-    <div class="about-container">
+  <div class="slider">
+    <button class="nav" onclick="prevImage()">❮</button>
+    <img id="aboutImg" src="suren01.JPG" alt="About Image">
+    <button class="nav" onclick="nextImage()">❯</button>
+  </div>
 
-        <div class="slider">
-            <img src="suren04.JPG" alt="About image">
-        </div>
-
-        <div class="about-content">
-            <h2>How This Start Begin</h2>
-            <p>
-                Since I was a boy, photography has always been my passion.
-                I started capturing moments that tell stories and emotions.
-            </p>
-        </div>
-
-    </div>
+  <p class="about-text">
+    LensbySuren is a creative photography brand focused on capturing real emotions,
+    meaningful stories, and cinematic moments. Every frame is crafted with passion,
+    attention to detail, and artistic vision to create timeless visuals.
+  </p>
 </section>
-
-<footer>
-    <p>© 2026 Suren Photography</p>
-</footer>
-
+<footer>© 2026 Suren Photography</footer>
 <script src="suren.js"></script>
 </body>
 </html>
