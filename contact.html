@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Suren</title>
 <link rel="stylesheet" href="suren.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,42 +12,48 @@
     <h2>Welcome to <span>My Profile</span></h2>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portofolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="aboutus.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
 </nav>
 
-<section class="contact fade-in">
+<section class="contact">
   <div class="contact-card">
     <h2>Contact Me</h2>
-    <p>Send me a message or reach out via social media!</p>
+    <p>Send me a message or reach out via social media</p>
 
     <form id="contactForm">
       <div class="input-group">
         <span class="icon"><i class="fa-solid fa-user"></i></span>
-        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Name" required>
       </div>
 
       <div class="input-group">
         <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="email" placeholder="Your Email" required>
       </div>
 
       <div class="input-group">
         <span class="icon"><i class="fa-solid fa-pen"></i></span>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
       </div>
 
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit">Send Message</button>
     </form>
 
     <p id="formMsg"></p>
 
     <div class="social">
-      <a href="https://www.instagram.com/lensbysuren/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="mailto:surentheransurentheran2@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      <a href="https://wa.me/60168726052?text=Hello%20Suren%2C%20I%20saw%20your%20portfolio!" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a class="social-btn insta" href="https://www.instagram.com/lensbysuren/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a class="social-btn email" href="mailto:surentheransurentheran2@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+      <a class="social-btn wa" href="https://wa.me/60168726052" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
     </div>
   </div>
 </section>
@@ -58,18 +62,6 @@
     <p>© 2026 Suren Photography</p>
 </footer>
 
-<script>
-const contactForm = document.getElementById('contactForm');
-const formMsg = document.getElementById('formMsg');
-
-if(contactForm){
-    contactForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        formMsg.textContent = "Thank you! Your message has been sent.";
-        contactForm.reset();
-    });
-}
-</script>
-
+<script src="suren.js"></script>
 </body>
 </html>
