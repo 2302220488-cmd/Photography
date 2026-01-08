@@ -4,67 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Suren</title>
+
 <link rel="stylesheet" href="suren.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-    <h2>Welcome to <span>My Profile</span></h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portofolio.html">Portfolio</a></li>
-        <li><a href="aboutus.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+<nav class="navbar">
+  <h2>Suren<span>.</span></h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portofolio.html">Portfolio</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
 <section class="contact">
-  <div class="contact-card">
-    <h2>Contact Me</h2>
-    <p>Send me a message or reach out via social media</p>
+  <div class="contact-box">
 
-    <form id="contactForm">
-      <div class="input-group">
-        <span class="icon"><i class="fa-solid fa-user"></i></span>
-        <input type="text" placeholder="Your Name" required>
-      </div>
+    <div class="contact-text">
+      <h2>Let’s Work Together</h2>
+      <p>
+        Have a project in mind or want to collaborate?  
+        Feel free to reach out and let’s create something meaningful together.
+      </p>
+    </div>
 
-      <div class="input-group">
-        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-        <input type="email" placeholder="Your Email" required>
-      </div>
-
-      <div class="input-group">
-        <span class="icon"><i class="fa-solid fa-pen"></i></span>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-      </div>
-
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Notes / Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
-    <p id="formMsg"></p>
-
-    <div class="social">
-      <a class="social-btn insta" href="https://www.instagram.com/lensbysuren/" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
+    <div class="contact-social">
+      <a href="https://www.instagram.com/lensbysuren/" target="_blank">
+        <i class="fab fa-instagram"></i>
       </a>
-      <a class="social-btn email" href="mailto:surentheransurentheran2@gmail.com">
-        <i class="fa-solid fa-envelope"></i> Email
-      </a>
-      <a class="social-btn wa" href="https://wa.me/60168726052" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
+      <a href="mailto:surentheransurentheran2@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/60168726052" target="_blank">
+        <i class="fab fa-whatsapp"></i>
       </a>
     </div>
+
   </div>
 </section>
 
 <footer>
-    <p>© 2026 Suren Photography</p>
+  © 2026 Suren Photography
 </footer>
 
-<script src="suren.js"></script>
 </body>
 </html>
-
-
