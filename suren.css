@@ -18,7 +18,6 @@ nav {
     align-items: center;
     padding: 20px 50px;
     background: #3a3a3a;
-    flex-wrap: nowrap;
 }
 
 nav h2 {
@@ -34,14 +33,13 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    white-space: nowrap;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover,
@@ -77,36 +75,19 @@ nav a.active {
     margin-bottom: 20px;
 }
 
-/* Tombol utama dan outline */
-.btn, .btn-outline {
+.btn {
     display: inline-block;
     padding: 12px 28px;
-    margin: 10px 10px 0 0;
+    background: #7dd6d1;
+    color: #000;
     font-weight: bold;
     text-decoration: none;
     border-radius: 25px;
-    transition: all 0.3s ease;
-}
-
-.btn {
-    background: #7dd6d1;
-    color: #000;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: #5cbdb8;
-    transform: scale(1.05);
-}
-
-.btn-outline {
-    background: transparent;
-    color: #7dd6d1;
-    border: 2px solid #7dd6d1;
-}
-
-.btn-outline:hover {
-    background: #7dd6d1;
-    color: #000;
     transform: scale(1.05);
 }
 
@@ -116,8 +97,6 @@ nav a.active {
 
 .hero-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -149,32 +128,14 @@ nav a.active {
 }
 
 .about-content p {
-    line-height: 1.6;
     color: #ddd;
-}
-
-.about-content button {
-    margin-top: 15px;
-    padding: 10px 25px;
-    background: #7dd6d1;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.about-content button:hover {
-    transform: scale(1.05);
+    line-height: 1.6;
 }
 
 /* ================= PORTFOLIO ================= */
 .portfolio {
     padding: 80px 0;
     text-align: center;
-}
-
-.portfolio h2 {
-    margin-bottom: 40px;
 }
 
 .portfolio-grid {
@@ -202,25 +163,22 @@ nav a.active {
     background: linear-gradient(135deg, #3a3a3a, #2e2e2e);
     padding: 50px 40px;
     border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     max-width: 500px;
     width: 100%;
     text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 .contact-card h2 {
-    margin-bottom: 10px;
     color: #7dd6d1;
-    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .contact-card p {
-    margin-bottom: 30px;
     color: #ddd;
-    line-height: 1.5;
+    margin-bottom: 25px;
 }
 
-/* Input + textarea dengan icon */
 .input-group {
     position: relative;
     margin-bottom: 20px;
@@ -232,153 +190,54 @@ nav a.active {
     top: 50%;
     transform: translateY(-50%);
     color: #7dd6d1;
-    font-size: 18px;
 }
 
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 14px 15px 14px 40px;
+    padding: 14px 14px 14px 40px;
     border-radius: 10px;
     border: 2px solid #555;
     background: #2f2f2f;
     color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease;
 }
 
 .input-group input:focus,
 .input-group textarea:focus {
     border-color: #7dd6d1;
-    box-shadow: 0 0 10px #7dd6d1;
+    box-shadow: 0 0 8px #7dd6d1;
+    outline: none;
 }
 
-/* Tombol kirim */
 .contact-card button {
     width: 100%;
     padding: 14px;
-    margin-top: 10px;
-    background: #7dd6d1;
     border: none;
     border-radius: 30px;
+    background: #7dd6d1;
     font-weight: bold;
-    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .contact-card button:hover {
     background: #5cbdb8;
     transform: scale(1.03);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Pesan berhasil dikirim */
 #formMsg {
     margin-top: 15px;
     color: #7dd6d1;
     font-weight: bold;
-    font-size: 15px;
 }
 
-/* Tombol sosial media */
-.social {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social a {
-    color: #7dd6d1;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: 1px solid #7dd6d1;
-    transition: all 0.3s ease;
-}
-
-.social a:hover {
-    background: #7dd6d1;
-    color: #000;
-    transform: scale(1.05);
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #222;
-    text-align: center;
-    padding: 15px;
-    font-size: 13px;
-    color: #aaa;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .hero,
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text,
-    .hero-img {
-        width: 100%;
-        padding: 40px 20px;
-    }
-
-    .hero-img {
-        height: 250px;
-    }
-
-    .about-container {
-        gap: 30px;
-        width: 90%;
-    }
-
-    .slider {
-        width: 100%;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .input-group input,
-    .input-group textarea {
-        padding-left: 35px;
-    }
-
-    .contact-card {
-        padding: 30px 20px;
-    }
-
-    .contact-card button {
-        font-size: 14px;
-        padding: 12px;
-    }
-}
-/* Social media modern buttons */
+/* ================= SOCIAL BUTTONS ================= */
 .social {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .social-btn {
@@ -389,8 +248,12 @@ footer {
     border-radius: 25px;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease;
     color: #fff;
+    transition: 0.3s;
+}
+
+.social-btn i {
+    font-size: 18px;
 }
 
 /* Instagram */
@@ -421,9 +284,38 @@ footer {
     transform: scale(1.05);
 }
 
-/* Icon styling */
-.social-btn i {
-    font-size: 18px;
+/* ================= FOOTER ================= */
+footer {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
 }
 
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero,
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-img {
+        width: 100%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
