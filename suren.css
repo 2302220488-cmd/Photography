@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +11,18 @@ body {
     color: #fff;
 }
 
-/* ================= NAV ================= */
+/* ================= NAVBAR ================= */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background: #3a3a3a;
+    flex-wrap: nowrap;
 }
 
 nav h2 {
     font-size: 18px;
-    font-weight: normal;
     font-weight: bold;
 }
 
@@ -34,16 +34,20 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    white-space: nowrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #7dd6d1;
+    font-weight: bold;
 }
 
 /* ================= HERO ================= */
@@ -51,11 +55,12 @@ nav a:hover {
     display: flex;
     align-items: center;
     min-height: 85vh;
+    padding: 0 50px;
+    gap: 20px;
 }
 
 .hero-text {
     width: 45%;
-    padding: 70px;
 }
 
 .hero-text h1 {
@@ -72,11 +77,37 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.hero-text button {
-    padding: 10px 25px;
+/* Tombol utama dan outline */
+.btn, .btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px 10px 0 0;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn {
     background: #7dd6d1;
-    border: none;
-    cursor: pointer;
+    color: #000;
+}
+
+.btn:hover {
+    background: #5cbdb8;
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #7dd6d1;
+    border: 2px solid #7dd6d1;
+}
+
+.btn-outline:hover {
+    background: #7dd6d1;
+    color: #000;
+    transform: scale(1.05);
 }
 
 .hero-img {
@@ -87,6 +118,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 /* ================= ABOUT ================= */
@@ -101,10 +133,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 50px;
-}
-
-.slider {
-    width: 300px;
 }
 
 .slider img {
@@ -131,42 +159,151 @@ nav a:hover {
     background: #7dd6d1;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.about-content button:hover {
+    transform: scale(1.05);
 }
 
 /* ================= PORTFOLIO ================= */
-.gallery {
+.portfolio {
     padding: 80px 0;
     text-align: center;
 }
 
-.gallery-box {
+.portfolio h2 {
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    background: #2f2f2f;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #3a3a3a, #2e2e2e);
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-card h2 {
+    margin-bottom: 10px;
+    color: #7dd6d1;
+    font-size: 28px;
+}
+
+.contact-card p {
+    margin-bottom: 30px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Input + textarea dengan icon */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7dd6d1;
+    font-size: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 15px 14px 40px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #7dd6d1;
+    box-shadow: 0 0 10px #7dd6d1;
+}
+
+/* Tombol kirim */
+.contact-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: #7dd6d1;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-card button:hover {
+    background: #5cbdb8;
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Pesan berhasil dikirim */
+#formMsg {
+    margin-top: 15px;
+    color: #7dd6d1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Tombol sosial media */
+.social {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.gallery-box img {
-    width: 200px;
+.social a {
+    color: #7dd6d1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #7dd6d1;
+    transition: all 0.3s ease;
 }
 
-/* ================= CONTACT ================= */
-.contact {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.contact input {
-    padding: 10px;
-    width: 250px;
-    border: none;
-}
-
-.contact button {
-    margin-top: 10px;
-    padding: 10px 25px;
+.social a:hover {
     background: #7dd6d1;
-    border: none;
-    cursor: pointer;
+    color: #000;
+    transform: scale(1.05);
 }
 
 /* ================= FOOTER ================= */
@@ -177,47 +314,19 @@ footer {
     font-size: 13px;
     color: #aaa;
 }
-/* PORTFOLIO */
-.portfolio {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.portfolio h2 {
-    margin-bottom: 40px;
-}
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    white-space: nowrap; /* PENTING */
-}
-.portfolio-grid {
-    width: 75%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #3a3a3a;
-    flex-wrap: nowrap;   /* PENTING */
-}
-
-.portfolio-grid img {
-    width: 100%;
-    border-radius: 5px;
-}
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
@@ -230,6 +339,91 @@ nav {
     .hero-text,
     .hero-img {
         width: 100%;
-        padding: 40px;
+        padding: 40px 20px;
+    }
+
+    .hero-img {
+        height: 250px;
+    }
+
+    .about-container {
+        gap: 30px;
+        width: 90%;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding-left: 35px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-card button {
+        font-size: 14px;
+        padding: 12px;
     }
 }
+/* Social media modern buttons */
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+/* Instagram */
+.social-btn.insta {
+    background: #E1306C;
+}
+.social-btn.insta:hover {
+    background: #c72b5d;
+    transform: scale(1.05);
+}
+
+/* Email */
+.social-btn.email {
+    background: #7dd6d1;
+    color: #000;
+}
+.social-btn.email:hover {
+    background: #5cbdb8;
+    transform: scale(1.05);
+}
+
+/* WhatsApp */
+.social-btn.wa {
+    background: #25D366;
+}
+.social-btn.wa:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* Icon styling */
+.social-btn i {
+    font-size: 18px;
+}
+
+
